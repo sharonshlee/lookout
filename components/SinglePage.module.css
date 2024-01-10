@@ -1,0 +1,9 @@
+.image.featured img {
+	height: auto !important;
+	position: relative !important;
+}
+
+#wrapper {
+	margin: 3em 2em 0 2em !important;
+	border: 0 !important;
+}
