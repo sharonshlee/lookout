@@ -8,7 +8,7 @@
 	background-repeat: repeat, no-repeat;
 	background-size: auto, cover;
 	border: solid 1px rgba(160, 160, 160, 0.3);
-	color: #e6e4e4;
+	color: white;
 	padding: 12em 0 21em 0;
 	text-align: center;
 }
@@ -28,7 +28,7 @@
 #banner h4,
 #banner h5,
 #banner h6 {
-	color: #e6e4e4;
+	color: white;
 }
 
 #banner h2 {

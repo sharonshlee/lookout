@@ -12,7 +12,7 @@ export default function Header() {
 			<nav className={classes.links}>
 				<ul>
 					<li>
-						<NavLink href="/apply-job">Find A Job</NavLink>
+						<NavLink href="/jobs">Find A Job</NavLink>
 					</li>
 					<li>
 						<NavLink href="/post-job">Refer A Job</NavLink>

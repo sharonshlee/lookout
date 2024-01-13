@@ -3,24 +3,15 @@ import MainPostHeader from "./MainPostHeader";
 import MainPostContent from "./MainPostContent";
 import MainPostFooter from "./MainPostFooter";
 
-export default function MainPost({ mainContent }) {
-	const { company, jobContent } = mainContent;
-
+export default function MainPost({ job }) {
 	return (
-		mainContent && (
-			<div className="main">
-				<div className="stickToTop">
-					<article className="post">
-						<MainPostHeader {...mainContent} />
-						{jobContent && (
-							<MainPostContent
-								{...jobContent}
-								company={company}
-							/>
-						)}
-						<MainPostFooter />
-					</article>
-					{/* <ul className="actions pagination">
+		<div className="main">
+			<article className="post ">
+				<MainPostHeader {...job} />
+				<MainPostContent {...job.jobContent} />
+				<MainPostFooter />
+			</article>
+			{/* <ul className="actions pagination">
 						<li>
 							<a
 								href=""
@@ -35,8 +26,6 @@ export default function MainPost({ mainContent }) {
 							</a>
 						</li>
 					</ul> */}
-				</div>
-			</div>
-		)
+		</div>
 	);
 }

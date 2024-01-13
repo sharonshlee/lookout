@@ -1,50 +1,49 @@
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 
-import { referrersData } from "../app/data";
 import SmallHeader from "./SmallHeader";
 
 import classes from "./Search.module.css";
 
 export default function Search({ setSideContent, setIsSearch }) {
-	const [titleReferrerCompanyInput, setTitleReferrerCompanyInput] =
-		useState("");
-	const [typeCountryInput, setTypeCountryInput] = useState("");
+	// const [titleReferrerCompanyInput, setTitleReferrerCompanyInput] =
+	// 	useState("");
+	// const [typeCountryInput, setTypeCountryInput] = useState("");
 
-	const handleSetSideContent = (
-		titleReferrerCompanyValue,
-		typeCountryValue
-	) => {
-		setIsSearch(!!titleReferrerCompanyValue || !!typeCountryValue);
+	// const handleSetSideContent = (
+	// 	titleReferrerCompanyValue,
+	// 	typeCountryValue
+	// ) => {
+	// 	setIsSearch(!!titleReferrerCompanyValue || !!typeCountryValue);
 
-		const searchResult = referrersData.filter((data) => {
-			const result1 =
-				!titleReferrerCompanyValue ||
-				data?.jobTitle
-					.toLowerCase()
-					.includes(titleReferrerCompanyValue?.toLowerCase()) ||
-				data?.company
-					.toLowerCase()
-					.includes(titleReferrerCompanyValue?.toLowerCase()) ||
-				data?.referredBy
-					.toLowerCase()
-					.includes(titleReferrerCompanyValue?.toLowerCase());
+	// 	const searchResult = referrersData.filter((data) => {
+	// 		const result1 =
+	// 			!titleReferrerCompanyValue ||
+	// 			data?.jobTitle
+	// 				.toLowerCase()
+	// 				.includes(titleReferrerCompanyValue?.toLowerCase()) ||
+	// 			data?.company
+	// 				.toLowerCase()
+	// 				.includes(titleReferrerCompanyValue?.toLowerCase()) ||
+	// 			data?.referredBy
+	// 				.toLowerCase()
+	// 				.includes(titleReferrerCompanyValue?.toLowerCase());
 
-			const result2 =
-				!typeCountryValue ||
-				(data.country &&
-					data?.country
-						.toLowerCase()
-						.includes(typeCountryValue?.toLowerCase())) ||
-				data?.location
-					.toLowerCase()
-					.includes(typeCountryValue?.toLowerCase());
+	// 		const result2 =
+	// 			!typeCountryValue ||
+	// 			(data.country &&
+	// 				data?.country
+	// 					.toLowerCase()
+	// 					.includes(typeCountryValue?.toLowerCase())) ||
+	// 			data?.location
+	// 				.toLowerCase()
+	// 				.includes(typeCountryValue?.toLowerCase());
 
-			return result1 && result2;
-		});
+	// 		return result1 && result2;
+	// 	});
 
-		setSideContent(searchResult);
-	};
+	// 	setSideContent(searchResult);
+	// };
 
 	return (
 		<div id={classes.headerAndSearch}>
@@ -55,28 +54,28 @@ export default function Search({ setSideContent, setIsSearch }) {
 						type="text"
 						name="query"
 						placeholder="Search: job title | referrer | company"
-						onChange={(e) => {
-							setTitleReferrerCompanyInput(e.target.value);
-						}}
+						// onChange={(e) => {
+						// 	setTitleReferrerCompanyInput(e.target.value);
+						// }}
 					/>
 					<input
 						id="jobTypeCountryInput"
 						type="text"
 						name="query"
 						placeholder="(remote . hybrid . on-site) | country"
-						onChange={(e) => {
-							setTypeCountryInput(e.target.value);
-						}}
+						// onChange={(e) => {
+						// 	setTypeCountryInput(e.target.value);
+						// }}
 					/>
 					<Link
 						href="#"
 						className="button primary"
-						onClick={() => {
-							handleSetSideContent(
-								titleReferrerCompanyInput,
-								typeCountryInput
-							);
-						}}
+						// onClick={() => {
+						// 	handleSetSideContent(
+						// 		titleReferrerCompanyInput,
+						// 		typeCountryInput
+						// 	);
+						// }}
 					>
 						Search
 					</Link>

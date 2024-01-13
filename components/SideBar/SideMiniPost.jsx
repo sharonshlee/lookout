@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 
-export default function SideMiniPost({ id, referrer, setMainContent }) {
+export default function SideMiniPost({ id, job }) {
 	const {
 		jobTitle,
 		location,
@@ -11,19 +11,19 @@ export default function SideMiniPost({ id, referrer, setMainContent }) {
 		company,
 		avatar,
 		referredBy,
-	} = referrer;
+	} = job;
 
-	const handleSetMainContent = () => {
-		setMainContent(referrer);
-	};
+	// const handleSetMainContent = () => {
+	// 	setMainContent(referrer);
+	// };
 
 	return (
 		<article
 			className="mini-post"
 			key={id}
-			onClick={() => {
-				handleSetMainContent();
-			}}
+			// onClick={() => {
+			// 	handleSetMainContent();
+			// }}
 		>
 			<header>
 				<h2>
