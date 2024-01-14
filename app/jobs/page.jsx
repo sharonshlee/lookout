@@ -1,20 +1,21 @@
-"use server";
+// "use server";
+
 import { getJobs } from "@/lib/jobs";
 
 // import Menu from "@/components/Menu";
 import SideBar from "@/components/SideBar/SideBar";
-import Search from "@/components/Search";
+import Error from "./error";
 
 export default async function Jobs() {
 	const jobs = await getJobs();
 
 	return (
 		<>
-			<Search />
-			<div id="wrapper">
-				{/* <Menu /> */}
+			{!jobs && <Error />}
+			{jobs && (
+				<div id="wrapper">
+					{/* <Menu /> */}
 
-				{jobs && (
 					<SideBar
 						// setMainContent={(a) => {
 						// 	console.log(">>>>>>>A:", a);
@@ -23,8 +24,8 @@ export default async function Jobs() {
 						// // isSearch={isSearch}
 						jobs={jobs}
 					/>
-				)}
-			</div>
+				</div>
+			)}
 		</>
 	);
 }

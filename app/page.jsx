@@ -1,9 +1,11 @@
-// "use client";
-
 // import { useEffect, useState } from "react";
+
+import { Suspense } from "react";
+import classes from "./page.module.css";
 
 import Banner from "@/components/Banner";
 import Jobs from "./jobs/page";
+import Search from "@/components/Search";
 
 export default function Home() {
 	// const [mainContent, setMainContent] = useState();
@@ -23,7 +25,12 @@ export default function Home() {
 		<>
 			<Banner />
 			{/* <Search setSideContent={setSideContent} setIsSearch={setIsSearch} /> */}
-			<Jobs />
+			<Search />
+			<Suspense
+				fallback={<p className={classes.loading}>Fetching Jobs...</p>}
+			>
+				<Jobs />
+			</Suspense>
 		</>
 	);
 }

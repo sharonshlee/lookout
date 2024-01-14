@@ -5,7 +5,8 @@ import SmallHeader from "./SmallHeader";
 
 import classes from "./Search.module.css";
 
-export default function Search({ setSideContent, setIsSearch }) {
+export default function Search() {
+	// export default function Search({ setSideContent, setIsSearch }) {
 	// const [titleReferrerCompanyInput, setTitleReferrerCompanyInput] =
 	// 	useState("");
 	// const [typeCountryInput, setTypeCountryInput] = useState("");

@@ -20,7 +20,7 @@ export default function SinglePage({ title, image }) {
 							</p>
 						</div>
 						<div className="meta">
-							<time className="published" datetime="2015-11-01">
+							<time className="published" dateTime="2015-11-01">
 								November 1, 2015
 							</time>
 							<a href="#" className="author">
