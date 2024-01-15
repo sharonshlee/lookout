@@ -15,7 +15,7 @@ export default function Header() {
 						<NavLink href="/jobs">Find A Job</NavLink>
 					</li>
 					<li>
-						<NavLink href="/post-job">Refer A Job</NavLink>
+						<NavLink href="/jobs/referJob">Refer A Job</NavLink>
 					</li>
 					<li>
 						<NavLink href="/referer">Referer</NavLink>

@@ -25,7 +25,7 @@ export default function Footer() {
 			</ul> */}
 
 			<Link href={`mailto:${EMAIL}`}>Email Us</Link>
-			<Link href="/post-job">Post A Job</Link>
+			<Link href="/jobs/referJob">Post A Job</Link>
 
 			<h3>Careers</h3>
 			<Link href="/">Lookout is hiring</Link>
