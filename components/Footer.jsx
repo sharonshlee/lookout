@@ -4,6 +4,8 @@ import Link from "next/link";
 import classes from "./Footer.module.css";
 
 export default function Footer() {
+	const EMAIL = "lookout@gmail.com";
+
 	return (
 		<div className={classes.footer}>
 			<h3>About Lookout</h3>
@@ -22,7 +24,7 @@ export default function Footer() {
 				</li>
 			</ul> */}
 
-			<Link href="/email">Email Us</Link>
+			<Link href={`mailto:${EMAIL}`}>Email Us</Link>
 			<Link href="/post-job">Post A Job</Link>
 
 			<h3>Careers</h3>

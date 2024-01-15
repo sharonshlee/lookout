@@ -13,7 +13,7 @@ export default function MainPostFooter() {
 			</ul>
 			<ul className="stats">
 				<li>
-					<Link href="#">General</Link>
+					<Link href="#">Software</Link>
 				</li>
 				<li>
 					<Link href="#" className="icon solid fa-heart">
