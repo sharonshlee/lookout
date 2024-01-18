@@ -1,32 +1,9 @@
 import React from "react";
 
 import classes from "./page.module.css";
-import { addJob } from "@/lib/jobs";
+import referJob from "@/lib/actions";
 
 export default function ReferJobPage() {
-	const referJob = async (formData) => {
-		"use server";
-
-		const newJob = {
-			jobId: crypto.randomUUID(),
-			jobTitle: formData.get("jobTitle"),
-			company: formData.get("company"),
-			location: formData.get("location"),
-			country: formData.get("country"),
-			salaryRange: formData.get("salaryRange"),
-			jobType: formData.get("jobType"),
-			jobContent: {
-				jobDescription: formData.get("jobDescription"),
-				aboutCompany: formData.get("aboutCompany"),
-				aboutTeamRole: formData.get("aboutTeamRole"),
-				responsibilities: formData.get("responsibilities"),
-				minimumRequirements: formData.get("minimumRequirements"),
-				preferredRequirements: formData.get("preferredRequirements"),
-			},
-		};
-		console.log(newJob);
-		await addJob(newJob);
-	};
 	return (
 		<main>
 			<div className={classes.wrapper}>
