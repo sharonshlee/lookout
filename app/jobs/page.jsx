@@ -1,5 +1,3 @@
-// "use server";
-
 import { getJobs } from "@/lib/jobs";
 
 // import Menu from "@/components/Menu";

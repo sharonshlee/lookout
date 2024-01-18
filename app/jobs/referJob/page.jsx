@@ -1,7 +1,7 @@
-import React from "react";
-
 import classes from "./page.module.css";
 import referJob from "@/lib/actions";
+
+import JobsFormSubmit from "@/components/jobs/jobsFormSubmit";
 
 export default function ReferJobPage() {
 	return (
@@ -115,9 +115,7 @@ export default function ReferJobPage() {
 							/>
 						</div>
 
-						<button type="submit" className="button large">
-							Refer Job
-						</button>
+						<JobsFormSubmit />
 					</form>
 				</article>
 			</div>
