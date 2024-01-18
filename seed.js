@@ -17,7 +17,7 @@ async function seedDynamoDB() {
 		try {
 			const params = {
 				TableName: tableName,
-				Item: item,
+				Item: { ...item, datePosted: Date.now() },
 			};
 
 			await db.send(new PutCommand(params));

@@ -38,7 +38,7 @@ export default function SideMiniPost({ id, job }) {
 				<p>
 					<Link href="#" className="author">
 						<img
-							src={`/images/${avatar}`}
+							src={`/images/${avatar ? avatar : "avatar.jpg"}`}
 							alt="Sharon"
 							title={`Sharon@${company}`}
 						/>

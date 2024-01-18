@@ -1,15 +1,21 @@
+"use client";
+
+import { useFormState } from "react-dom";
+
 import classes from "./page.module.css";
 import referJob from "@/lib/actions";
 
 import JobsFormSubmit from "@/components/jobs/jobsFormSubmit";
 
 export default function ReferJobPage() {
+	const [state, FormAction] = useFormState(referJob, { message: null });
+
 	return (
 		<main>
 			<div className={classes.wrapper}>
 				<article className="post">
 					<h2>Refer A Job</h2>
-					<form action={referJob}>
+					<form action={FormAction}>
 						<div className={classes.item}>
 							<label htmlFor="jobTitle">Title</label>
 							<input
@@ -114,7 +120,7 @@ export default function ReferJobPage() {
 								name="preferredRequirements"
 							/>
 						</div>
-
+						<p>{state.message && state.message}</p>
 						<JobsFormSubmit />
 					</form>
 				</article>
