@@ -1150,7 +1150,7 @@ ul.actions.fit.stacked {
 	overflow: scroll;
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
-	height: 475px;
+	height: 510px;
 	text-align: justify;
 }
 
@@ -1777,13 +1777,15 @@ body.single #wrapper {
 }
 
 /* Main */
-#main {
+.main {
 	-moz-flex-grow: 1;
 	-webkit-flex-grow: 1;
 	-ms-flex-grow: 1;
 	flex-grow: 1;
 	-ms-flex: 1;
 	width: 100%;
+	position: sticky;
+	top: 10px;
 }
 
 /* .stickToTop {

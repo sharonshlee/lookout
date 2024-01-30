@@ -4,6 +4,11 @@ import { getJobs } from "@/lib/jobs";
 import SideBar from "@/components/SideBar/SideBar";
 import Error from "./error";
 
+export const metadata = {
+	title: "All Jobs",
+	description: "Check out the jobs posted by our referrers!",
+};
+
 export default async function Jobs() {
 	const jobs = await getJobs();
 

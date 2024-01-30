@@ -16,7 +16,8 @@ export default function SmallHeader() {
 			</header>
 			<header>
 				<p>
-					Bridging the job and you by <Link href="/referer">me.</Link>
+					Bridging the job and you by{" "}
+					<Link href="/referrer">me.</Link>
 					<br />
 				</p>
 			</header>
